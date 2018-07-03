@@ -1,25 +1,20 @@
+def is_even(number):
+    return number % 2 == 0
+
 def even_number_of_evens(numbers):
         
     count = 0
     
-    # Spins through the numbers and adds to the count if an even number is found
     for num in numbers:
-        if num % 2 == 0:
+        if is_even(num):
             count += 1
-        else:
-            continue
-    
-    # If no numbers, or all false numbers return False
+
     if count == 0:
         return False
     
     # If the number of even numbers is odd, return False
-    elif count % 2 != 0:
-        return False
-
-    # If the number of even numbers is even return True
-    elif count % 2 == 0:
-        return True
+    else:
+        return is_even(count)
         
 
 even_number_of_evens([2, 3, 9, 10, 13, 7, 8, 5, 12])
