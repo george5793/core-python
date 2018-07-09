@@ -15,5 +15,3 @@ def test_not_in(collection, item):
     
 def test_between(between_1, between_2, number):
     assert between_1 < number < between_2, "{0} is not between {1} and {2}".format(number, between_1, between_2)
-    
-test_between(10, 20, 25)
